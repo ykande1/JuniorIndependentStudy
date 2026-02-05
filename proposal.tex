@@ -9,16 +9,25 @@
 \singlespace
 \usepackage[left=1in,right=1in,top=1in,bottom=1in]{geometry}
 
-\title{\textbf{Project Topic}}
-\author{Your Name}
+\title{\textbf{Automating Regulatory Alignment: A RAG-Based Architecture for Navigating ESRS E1 Climate Disclosures}}
+\author{Yajas kandel}
 
 \begin{document}
 
 \maketitle
 
-In your proposal, you will provide justification on why your project matters based on work which has been done in this area, using in-line citations~\cite{clrsAlgorithms} to refer to existing works. Include what your project will accomplish and how your software will function. 
+\section{Project Topic and Significance}
 
-When you use an image, such as in Figure~\ref{fig:method}, refer to it in the text.
+The implementation of the Corporate Sustainability Reporting Directive (CSRD) and its associated European Sustainability Reporting Standards (ESRS) represents a major shift from voluntary sustainability disclosure to mandatory, audit-grade reporting across the European Union. Organizations now face substantial challenges in translating high level regulatory language into operational data collection workflows. Prior research in regulatory technology (RegTech) shows that the ``conceptual ambiguity'' and ``inherent complexity'' of emerging regulatory frameworks create significant barriers to compliance, particularly for small-to-medium enterprises (SMEs) \cite{article}. These barriers often lead to inconsistent reporting practices and an increased dependence on external consultants.
+
+Within the field of Computer Science, Retrieval-Augmented Generation (RAG) has emerged as a promising solution for navigating complex regulatory environments. Unlike traditional Large Language Models (LLMs), which rely solely on static training data, RAG systems dynamically retrieve authoritative, up-to-date documents during inference. This capability is especially important for sustainability reporting, where accuracy, verifiability, and source traceability are essential to avoid risks such as greenwashing. Research in Natural Language Processing demonstrates that RAG architectures significantly reduce hallucinations by grounding model outputs in retrieved evidence \cite{lewis2021retrievalaugmentedgenerationknowledgeintensivenlp}. Additional studies show that retrieval based constraints improve factual consistency and reliability in high stakes domains such as law, policy, and scientific documentation \cite{shuster2021retrievalaugmentationreduceshallucination}.
+
+By constraining the model to generate responses only from a Selected segment of the ESRS guidelines - ESRS E1 (Climate Change), the software ensures that the information provided is both accurate and verifiable.
+
+\section{Project Goals and Software Overview}
+
+The primary objective of this project is to develop a specialized software tool designed to support sustainability teams in aligning their internal data with the ESRS E1 standard. The AI will function as a ``Knowledge Assistant'' that provides evidence-backed answers to reporting queries by retrieving relevant passages from the ESRS corpus and generating grounded explanations through a RAG pipeline. The system will help organizations interpret disclosure requirements, identify necessary data inputs, and reduce reliance on external consultants by offering transparent, traceable, and regulation-aligned guidance.
+
 
 \begin{figure}[h]
 \begin{center}
