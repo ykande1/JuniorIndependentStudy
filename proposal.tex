@@ -22,7 +22,7 @@ The implementation of the Corporate Sustainability Reporting Directive (CSRD) an
 
 Within the field of Computer Science, Retrieval-Augmented Generation (RAG) has emerged as a promising solution for navigating complex regulatory environments. Unlike traditional Large Language Models (LLMs), which rely solely on static training data, RAG systems dynamically retrieve authoritative, up-to-date documents during inference. This capability is especially important for sustainability reporting, where accuracy, verifiability, and source traceability are essential to avoid risks such as greenwashing. Research in Natural Language Processing demonstrates that RAG architectures significantly reduce hallucinations by grounding model outputs in retrieved evidence \cite{lewis2021retrievalaugmentedgenerationknowledgeintensivenlp}. Additional studies show that retrieval based constraints improve factual consistency and reliability in high stakes domains such as law, policy, and scientific documentation \cite{shuster2021retrievalaugmentationreduceshallucination}.
 
-The primary objective of this project is to develop a specialized AI tool designed to support sustainability teams in aligning their internal data with the ESRS E1 (Climate Change) standard. The AI will function as a ``Knowledge Assistant'' that provides evidence-backed answers to reporting queries by retrieving relevant passages from the ESRS E1 and generating grounded explanations through a RAG pipeline. The system will help organizations interpret disclosure requirements, identify necessary data inputs, and reduce reliance on external consultants by offering transparent, traceable, and regulation-aligned guidance.
+The primary objective of this project is to develop a specialized AI tool designed to support sustainability teams in aligning their internal data with the ESRS E1 (Climate Change) standard. The AI will function as a ``Knowledge Assistant'' that provides evidence-backed answers to reporting queries by retrieving relevant passages from the ESRS E1 and the relevant European Financial Reporting Advisory Group (EFRAG) guidelines, generating grounded explanations through a RAG pipeline. The system will help organizations interpret disclosure requirements, identify necessary data inputs, and reduce reliance on external consultants by offering transparent, traceable, and regulation-aligned guidance.
 
 
 \begin{figure}[h]
@@ -38,7 +38,7 @@ The primary objective of this project is to develop a specialized AI tool design
 \section*{Appendix}
 Planned Features for the AI assistant include:
 \begin{itemize}
-    \item \textbf{PDF Reader}: Develop a script to extract raw text from official ESRS E1 documentation for digital processing.
+    \item \textbf{Data Preparation}: Manually extract and clean raw text from official ESRS E1 and EFRAG documentation. This involves converting PDF content into a structured text format while ensuring that headers, footers, and page numbers are accounted for as metadata to prevent data noise during AI processing.
     \item \textbf{Document Chopper}: Implement a function to partition extracted text into small, manageable segments to ensure efficient AI processing.
     \item \textbf{Vector Database}: Establish a Vector Database to store text segments and their associated metadata (e.g. page number, header), allowing the system to retrieve information with verifiable source references.
     \item \textbf{Search Tool}: Create a retrieval mechanism that identifies the most relevant text segments from the database in response to a user query.
@@ -51,6 +51,7 @@ Planned Features for the AI assistant include:
     \item \textbf{PDF Viewer (Stretch Goal)}: Integrate an on-screen document viewer that displays the actual PDF page alongside the AI’s response.
     \item \textbf{Loading Bar (Stretch Goal)}: Add a visual progress indicator while the system performs retrieval and generation tasks.
     \item \textbf{Extend to other ESRS Standards (Stretch Goal)}: Expand the system's capabilities to include additional ESRS standards beyond E1, such as E2 (Pollution) and S1 (Own Workforce).
+    \item \textbf{Automated PDF Parsing (Stretch Goal)}: Develop a script to extract raw text from PDF files while maintaining the structural layout, reducing the need for manual data preparation in future iterations.
 \end{itemize}
 
 
