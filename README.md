@@ -7,8 +7,8 @@ The primary objective of this project is to develop a specialized AI tool design
 
 | **Issue** | **Due date** | |
 | --------- | ------------ | -- |
-| [Implement Data Preparation Pipeline](https://github.com/ykande1/JuniorIndependentStudy/issues/1) | Feb 20, 2026 | |
-| [Develop Document Chunking Logic](https://github.com/ykande1/JuniorIndependentStudy/issues/2) | Feb 20, 2026 | |
+| [Implement Data Preparation Pipeline](https://github.com/ykande1/JuniorIndependentStudy/issues/1) | Feb 26, 2026 | |
+| [Develop Document Chunking Logic](https://github.com/ykande1/JuniorIndependentStudy/issues/2) | Feb 26, 2026 | |
 | [Setup Vector Database](https://github.com/ykande1/JuniorIndependentStudy/issues/3) | Feb 26, 2022 | |
 | [Build Semantic Retrieval Mechanism (Search Tool)](https://github.com/ykande1/JuniorIndependentStudy/issues/4) | March 6, 2026 | |
 | [Design Grounded System Prompt](https://github.com/ykande1/JuniorIndependentStudy/issues/5) | March 6, 2026 | |
