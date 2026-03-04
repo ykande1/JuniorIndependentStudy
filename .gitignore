@@ -275,3 +275,20 @@ TSWLatexianTemp*
 
 # Makeindex log files
 *.lpz
+
+# Python environment
+.venv/
+__pycache__/
+*.py[cod]
+.mypy_cache/
+
+# Data and Databases (The "Heavy" stuff)
+db/
+data/processed/
+
+# Environment secrets
+.env
+
+# OS specific files
+.DS_Store
+Thumbs.db
