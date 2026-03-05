@@ -9,7 +9,7 @@
 \usepackage[left=1in,right=1in,top=1in,bottom=1in]{geometry}
 \usepackage{graphicx}
 
-\title{\textbf{A RAG-Based Architecture for Automating ESRS Climate Disclosure Alignment}}
+\title{\textbf{A RAG-Based Architecture for Automating ESRS E1 Climate Disclosure Alignment}}
 \author{Yajas Kandel}
 
 \begin{document}
@@ -24,6 +24,12 @@ However, the implementation of these standards has revealed a critical "complian
 Within the field of Computer Science, Regulatory Technology (RegTech) has emerged as a promising field to address these inefficiencies. Specifically, Retrieval-Augmented Generation (RAG) offers a specialized solution for navigating "knowledge-intensive" domains like climate law. Unlike standard Large Language Models (LLMs), which are trained on static data and are prone to "hallucinating" plausible but incorrect information, a RAG-based architecture dynamically retrieves authoritative, up-to-date documents during the generation process \cite{lewis2021retrievalaugmentedgenerationknowledgeintensivenlp}.
 
 The primary objective of this project is to develop a RAG-based architecture for navigating ESRS E1 (Climate Change) disclosures. The ultimate goal is to see if a specialized AI tool can be designed to support sustainability teams in aligning their internal data with the ESRS E1 standard. The AI will function as a ``Knowledge Assistant'' that provides evidence based answers to reporting queries by retrieving relevant passages from the ESRS E1 and the relevant European Financial Reporting Advisory Group (EFRAG) guidelines, generating grounded explanations through a RAG pipeline. The system will help organizations interpret disclosure requirements, identify necessary data inputs, and reduce the workload for report writing teams by offering transparent, traceable, and regulation-aligned guidance. Although the scope of this study is limited to the ESRS E1 standard, through continued system updates to cover all ESRS standards from E1-E9, a tool like this may someday be used a full-fledged commercial product that assists with CSRD compliance all over Europe. 
+
+\section{Background}
+To understand the architecture this system designed for automated regulatory alignment, one must first understand the two foundational pillars of the project: the technical mechanics of Retrieval-Augmented Generation (RAG) and the structural complexity of the European Sustainability Reporting Standards (ESRS).
+
+\subsection{Retrieval-Augmented Generation (RAG)}
+Retrieval-Augmented Generation is an architectural framework designed to enhance the capabilities of Large Language Models (LLMs) by providing them with access to external, authoritative knowledge bases. As established by Lewis et al. \cite{lewis2021retrievalaugmentedgenerationknowledgeintensivenlp}, RAG combines the "parametric memory" of pre-trained models with a "non-parametric memory" consisting of a dense document index. Parametric memory refers to the memory of a Large Language Model itself, in which it has learned patterns, grammar, and general facts. This knowledge is stored in the model's parameters. The issue is that parametric memory alone is static, meaning once training is over the model does not know anything new. Non - Parametric memory refers to the external knowledge fed to the LLM through a vector database. The benefit is that this type of knowledge is dynamic and controllable, with the AI's knowledge continuously updating through what it is fed. 
 
 \section{Related Works}
 
