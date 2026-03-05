@@ -9,15 +9,21 @@
 \usepackage[left=1in,right=1in,top=1in,bottom=1in]{geometry}
 \usepackage{graphicx}
 
-\title{\textbf{Project Topic}}
-\author{Your Name}
+\title{\textbf{A RAG-Based Architecture for Automating ESRS Climate Disclosure Alignment}}
+\author{Yajas Kandel}
 
 \begin{document}
 
 \maketitle
 
 \section{Introduction}
-The introduction will broadly introduce your topic, motivate it, and describe what will be done.
+The transition from voluntary sustainability disclosure to mandatory, audit-grade reporting represents one of the most significant regulatory shifts in the history of European corporate law. The Corporate Sustainability Reporting Directive (CSRD) has fundamentally altered the compliance landscape, requiring over 50,000 companies to provide granular disclosures on their environmental, social, and governance (ESG) impacts. At the heart of this directive are the European Sustainability Reporting Standards (ESRS), a multi-hundred-page framework designed to ensure "double materiality"—the concept that companies must report both on their financial risks from climate change and their external impact on the planet.
+
+However, the implementation of these standards has revealed a critical "compliance gap." As noted by Arner et al. \cite{article}, the inherent complexity and "conceptual ambiguity" of new regulatory frameworks often create significant barriers to entry, particularly for small-to-medium enterprises (SMEs) that lack the resources of large multinational corporations. Organizations currently face the daunting task of translating high-level legal requirements into operational data collection workflows. This manual process is not only slow and costly but also susceptible to "greenwashing", which is the practice of providing unstructured, non-verifiable sustainability claims that mask a lack of actual performance \cite{articleEPJ}.
+
+Within the field of Computer Science, Regulatory Technology (RegTech) has emerged as a promising field to address these inefficiencies. Specifically, Retrieval-Augmented Generation (RAG) offers a specialized solution for navigating "knowledge-intensive" domains like climate law. Unlike standard Large Language Models (LLMs), which are trained on static data and are prone to "hallucinating" plausible but incorrect information, a RAG-based architecture dynamically retrieves authoritative, up-to-date documents during the generation process \cite{lewis2021retrievalaugmentedgenerationknowledgeintensivenlp}.
+
+The primary objective of this project is to develop a RAG-based architecture for navigating ESRS E1 (Climate Change) disclosures. The ultimate goal is to see if a specialized AI tool can be designed to support sustainability teams in aligning their internal data with the ESRS E1 standard. The AI will function as a ``Knowledge Assistant'' that provides evidence based answers to reporting queries by retrieving relevant passages from the ESRS E1 and the relevant European Financial Reporting Advisory Group (EFRAG) guidelines, generating grounded explanations through a RAG pipeline. The system will help organizations interpret disclosure requirements, identify necessary data inputs, and reduce the workload for report writing teams by offering transparent, traceable, and regulation-aligned guidance. Although the scope of this study is limited to the ESRS E1 standard, through continued system updates to cover all ESRS standards from E1-E9, a tool like this may someday be used a full-fledged commercial product that assists with CSRD compliance all over Europe. 
 
 \section{Related Works}
 
