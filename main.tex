@@ -43,6 +43,13 @@ A unique consideration for this project is the intersection of AI performance an
 
 
 \section{Related Works}
+The development of a specialized retrieval system for ESRS E1 alignment sits at the intersection of regulatory informatics, natural language processing, and sustainable computing. This section synthesizes recent research to demonstrate how RAG and structured data extraction can address the complexities of corporate sustainability reporting.
+
+\subsection{Verifying Regulatory Alignment via RAG}
+The most direct precedent for this research is the work of Forster et al. (2025), who developed a machine learning framework to track ESG indicators across 600 of the largest European corporations \cite{articleICLR}. Their research specifically highlights a "transparency gap" where companies with high ESG ratings often provide significantly more granular data than their lower-rated peers. By utilizing a RAG pipeline to process over 9,200 corporate reports, Forster et al. demonstrated that retrieval-based models can systematically identify missing disclosures mandated by the newly established ESRS. This project builds upon their findings by narrowing the focus specifically to the E1 Climate Change standard, aiming to provide a deeper, more specialized alignment tool that maps operational data to the precise Disclosure Requirements identified in their research.
+
+\subsection{Unstructured Narratives to Structured Insights}
+Bronzini et al. (2024) address the underlying challenge of "greenwashing" by using LLMs to convert unstructured sustainability narratives into verifiable, structured data \cite{articleEPJ}. Their "Glitter or Gold?" framework utilizes RAG to map qualitative corporate claims to specific regulatory categories, revealing that many sustainability efforts are obscured during documentation. Bronzini’s work is foundational to this project’s PDF parser, or "Document Chopper"; it proves that the extraction of information from text heavy PDFs must be grounded in a structured semantic framework to be actionable. This project adopts their approach to information extraction but extends it by incorporating coordinate-based metadata (page numbers and headers) with the goal of eventual "audit-grade" traceability that pure narrative extraction lacks.
 
 \section{Methodology}
 Dijkstra's algorithm was chosen for single-source shortest path computation on graphs with non-negative edge weights, following the implementation presented in CLRS~\cite{clrsAlgorithms}.
