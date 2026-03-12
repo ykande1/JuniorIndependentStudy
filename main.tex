@@ -58,9 +58,13 @@ Literature has also begun to prioritize the environmental impact of the AI model
 Dijkstra's algorithm was chosen for single-source shortest path computation on graphs with non-negative edge weights, following the implementation presented in CLRS~\cite{clrsAlgorithms}.
 
 \subsection{Data Ingestion and Pre-processing}
+I built a Data Ingestion Pipeline Using PyMuPDF and Regex to ingest and structure the 320 pages+ of legal documentation into a json file that can 
 \subsection{Vector Database Implementation}
+A persistent ChromaDB instance serves as the system's non-parametric memory, storing document chunks as high-dimensional vectors. Using the all-MiniLM-L6-v2 model, the database indexes 384-dimensional embeddings that allow for efficient similarity searches while maintaining a lightweight local storage footprint.
 \subsection{The Retrieval Pipeline}
+By implementing a k-nearest neighbors (k-NN) approach, the pipeline identifies and extracts the top-$k$ most relevant context windows from the ESRS E1 standard to serve as factual grounding for the model.
 \subsection{The Generation Component}
+The generation layer utilizes a localized model to synthesize the retrieved legal segments into a coherent response. The model is constrained by a system prompt that enforces strict grounding, requiring the generator to cite specific Disclosure Requirements and preventing the hallucination of non-existent regulatory mandates.
 \subsection{User Interface Implementation}
 \subsection{Accuracy Mapping of the Model}
 
