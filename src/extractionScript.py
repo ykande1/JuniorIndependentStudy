@@ -63,6 +63,7 @@ def extract_content(pdf_path, ranges):
                     "type": chunk_type,                   # Provision VS Application
                     "text": clean_para                    # Real content
                 })
+                print ("+")
                 
     doc.close()
     return extracted_chunks
@@ -76,6 +77,7 @@ jobs = [
 ]
 
 master_data = []
+#Iterating through the "jobs" list
 for file_path, page_ranges in jobs:
     print(f"Processing {file_path}...")
     # .extend() adds the list of chunks to our master list without nesting them
