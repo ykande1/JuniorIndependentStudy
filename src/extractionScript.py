@@ -1,4 +1,4 @@
-import fitz  # PyMuPDF: Used for high performance PDF text and coordinate extraction
+import fitz  # PyMuPDF: Used for PDF text and coordinate extraction
 import json  # Used to save our structured data into a format machines can read easily
 import re    # Used to find patterns in the text
 import os    # Used to handle folder paths and ensure the script works on any computer
@@ -67,8 +67,6 @@ def extract_content(pdf_path, ranges):
                 
     doc.close()
     return extracted_chunks
-
-# --- EXECUTION BLOCK ---
 
 # CONFIGURATION: Define which files to process and which pages contain the real content
 jobs = [
