@@ -29,11 +29,11 @@ print(f"Successfully indexed {len(chunks)} chunks into ChromaDB.")
 def retrieve_context(query):
     results = collection.query(
         query_texts=[query],
-        n_results=3  # Top-k retrieval
+        n_results=5  # Top-k retrieval
     )
     return results['documents'][0], results['metadatas'][0]
 
 # --- TEST IT ---
-test_query = "What is the objective of ESRS E1?"
-docs, meta = retrieve_context(test_query)
-print(f"\nTop Match: {docs[0]}\nSource: {meta[0]['source']} (Page {meta[0]['page']})")
+#test_query = "What is the objective of ESRS E1?"
+#docs, meta = retrieve_context(test_query)
+#print(f"\nTop Match: {docs[0]}\nSource: {meta[0]['source']} (Page {meta[0]['page']})")

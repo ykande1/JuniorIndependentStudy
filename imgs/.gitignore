@@ -1,0 +1,4 @@
+data/esrs_db/
+.venv/
+__pycache__/
+data/processed/
