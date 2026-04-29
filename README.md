@@ -1,8 +1,36 @@
-# Automating Regulatory Alignment: A RAG-Based Architecture for Navigating ESRS E1 Climate Disclosures
-The primary objective of this project is to develop a specialized AI tool designed to support sustainability teams in aligning their internal data with the ESRS E1 (Climate Change) standard. The AI will function as a “Knowledge Assistant” that provides evidence-backed answers to reporting queries by retrieving relevant passages from the ESRS E1 and the relevant EFRAG guidelines, generating grounded explanations through a RAG pipeline.
+# ESRS E1 Climate Disclosure Assistant (RAG Pipeline)
 
+## Overview
+This project is a Retrieval-Augmented Generation (RAG) architecture designed to automate the alignment of corporate data with the European Sustainability Reporting Standards (ESRS) E1 standard. It functions as a "Knowledge Assistant" to help sustainability teams navigate complex regulatory requirements without relying on expensive or privacy-invasive cloud APIs.
 
+By utilizing localized, lightweight AI models, this project aligns with "Green AI" principles—reducing computational overhead and the associated carbon footprint while delivering audit-grade traceability for CSRD compliance.
 
+## Key Features
+
+* **Deterministic Document Parsing:** Utilizes `PyMuPDF` and regular expressions to ingest 320+ pages of complex legal PDFs. It employs a coordinate-based filtering system (y-axis thresholds) to strip structural noise (headers/footers) and logically partitions text by Disclosure Requirements (DRs) and Application Requirements (ARs).
+* **Structured Metadata Indexing:** Parses regulatory text into a structured JSON schema, preserving vital document provenance (Source, Page, Section, Type) to ensure 100% traceability.
+* **Semantic Retrieval Engine:** Uses a persistent `ChromaDB` instance and the `all-MiniLM-L6-v2` embedding model to perform cosine similarity searches, finding conceptual matches rather than relying on brittle keyword searches.
+* **Grounded Local Generation:** Employs a local `Phi-3 Mini` model (3.8B parameters) constrained by strict system prompting to prevent hallucination. The model generates concise summaries based *only* on the retrieved context.
+
+## Architecture Pipeline
+1.  **Ingestion:** Raw PDF -> PyMuPDF Coordinate Filter -> Regex State Machine -> JSON Array.
+2.  **Storage:** JSON -> `all-MiniLM-L6-v2` Embeddings -> ChromaDB Vector Index.
+3.  **Retrieval:** User Query -> Embedding -> Cosine Similarity Search (Top-$k$) -> Relevant Context.
+4.  **Generation:** Context + Query -> Grounded Prompt -> Local Phi-3 Mini -> Traceable Output.
+
+## Installation
+
+### Prerequisites
+* Python 3.10+
+* [Ollama](https://ollama.com/) (installed and running locally to serve the LLM)
+
+### Setup
+1. Clone the repository:
+   ```bash
+   git clone [https://github.com/ykande1/esrs-climate-assistant.git](https://github.com/ykande1/esrs-climate-assistant.git)
+   cd esrs-climate-assistant
+
+   
 ## Feature Calendar
 
 | **Issue** | **Due date** | |
