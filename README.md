@@ -1,9 +1,9 @@
 # ESRS E1 Climate Disclosure Assistant (RAG Pipeline)
 
 ## Overview
-This project is a Retrieval-Augmented Generation (RAG) architecture designed to automate the alignment of corporate data with the European Sustainability Reporting Standards (ESRS) E1 standard. It functions as a "Knowledge Assistant" to help sustainability teams navigate complex regulatory requirements without relying on expensive or privacy-invasive cloud APIs.
+This project is a Retrieval-Augmented Generation (RAG) architecture designed to automate the alignment of corporate data with the European Sustainability Reporting Standards (ESRS) E1 standard. It functions as a Knowledge Assistant to help sustainability teams navigate complex regulatory requirements without relying on expensive or privacy invasive cloud APIs.
 
-By utilizing localized, lightweight AI models, this project aligns with "Green AI" principles—reducing computational overhead and the associated carbon footprint while delivering audit-grade traceability for CSRD compliance.
+By utilizing localized, lightweight AI models, this project aligns with sustainable AI principles - reducing computational overhead and the associated carbon footprint while delivering audit-grade traceability for CSRD compliance.
 
 ## Key Features
 
